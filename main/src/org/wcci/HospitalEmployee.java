@@ -1,18 +1,16 @@
 package org.wcci;
 
 public abstract class HospitalEmployee {
-    protected int healingValue;
     private String employeeName;
     private double employeeSalary;
     private int employeeIdentification;
-    private String employeePosition;
+    private int employeePosition;
 
-    public HospitalEmployee(String employeeName, double employeeSalary, int employeeIdentification, String employeePosition, int healingValue) {
+    public HospitalEmployee(String employeeName, double employeeSalary, int employeeIdentification, int employeePosition) {
         this.employeeName = employeeName;
         this.employeeSalary = employeeSalary;
         this.employeeIdentification = employeeIdentification;
         this.employeePosition = employeePosition;
-        this.healingValue = healingValue;
 
     }
 
@@ -36,7 +34,7 @@ public abstract class HospitalEmployee {
         return employeeIdentification;
     }
 
-    public String getEmployeePosition() {
+    public int getEmployeePosition() {
         return employeePosition;
     }
 }

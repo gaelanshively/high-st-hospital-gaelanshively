@@ -57,4 +57,9 @@ public class HospitalPatient {
         System.out.println(patientName + " has been healed by " + healingValue + "!");
 
     }
+
+    public void drawThisPatientsBlood(int amountOfBlood) {
+        patientBlood -= amountOfBlood;
+        System.out.println(patientName + " has had their blood drawn!");
+    }
 }

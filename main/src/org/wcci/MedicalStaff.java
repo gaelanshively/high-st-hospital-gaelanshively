@@ -1,15 +1,15 @@
 package org.wcci;
 
-public abstract class MedicalStaff extends HospitalEmployee {
+public class MedicalStaff extends HospitalEmployee implements DrawsBlood {
     //sub class of employees able to perform medical tasks
+    int bloodDrawAmount = 2;
 
-
-    public MedicalStaff(String employeeName, double employeeSalary, int employeeIdentification, String employeePosition, int healingValue) {
-        super(employeeName, employeeSalary, employeeIdentification, employeePosition, healingValue);
+    public MedicalStaff(String employeeName, double employeeSalary, int employeeIdentification, int employeePosition) {
+        super(employeeName, employeeSalary, employeeIdentification, employeePosition);
 
     }
 
-//    public interface drawBlood() {
-//
-//    }
+    public void drawBlood(HospitalPatient patient) {
+        patient.drawThisPatientsBlood(bloodDrawAmount);
+    }
 }

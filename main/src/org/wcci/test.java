@@ -1,10 +1,8 @@
 package org.wcci;
 
 
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 
@@ -17,9 +15,9 @@ public class test {
 
     @BeforeEach
     void setUp() {
-        employeeInstance = new FacilityStaff("Name", 450.00, 80085, "Unemployed", 0);
+        employeeInstance = new FacilityStaff("Name", 450.00, 80085, 0);
         hospitalInstance.addEmployeeToHospitalMap(employeeInstance);
-        medicalStaffInstance = new Doctor("Carlos", 900.00, 8008135, "Pig Farmer", 5);
+        medicalStaffInstance = new Doctor("Carlos", 900.00, 8008135, 5);
         hospitalInstance.addEmployeeToHospitalMap(medicalStaffInstance);
         patientInstance = new HospitalPatient("Frankfurt", 1, 25);
         hospitalInstance.addPatientToHospitalMap(patientInstance);

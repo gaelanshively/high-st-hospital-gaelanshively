@@ -33,8 +33,16 @@ public class Hospital {
 
     public void showAllPatients() {
         System.out.println("Here is every patient in your care:");
+        String patientOutput;
         for (HospitalPatient patient : getMapOfPatients().values()) {
-            System.out.println(patient);
+            patientOutput = patient.toString();
+            System.out.println(patientOutput);
+        }
+    }
+
+    public void tickAllPatients() {
+        for (HospitalPatient patient : getMapOfPatients().values()) {
+            patient.tickPatient();
         }
     }
 
