@@ -26,7 +26,7 @@ public class Main {
     private static HospitalPatient pickAPatient() {
         String userPickPatient;
         hospital.showAllPatients();
-        System.out.println("Which patient would you like to treat?");
+        System.out.println("Which patient would you like to help?");
         userPickPatient = scannerInput.nextLine();
         HospitalPatient chosenPatient = hospital.getMapOfPatients().get(userPickPatient);
 
@@ -84,8 +84,9 @@ public class Main {
                 System.out.println(patient.getPatientName() + " is healthy!  They have been sent home.");
                 hospital.getMapOfPatients().remove(patient.getPatientName());
             }
-            
+
         }
+        printMainMenu();
     }
 
 
