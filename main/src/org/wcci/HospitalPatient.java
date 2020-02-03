@@ -45,6 +45,9 @@ public class HospitalPatient {
 
     private void increaseBloodLevels() {
         patientBlood++;
+        if (patientBlood > 10) {
+            patientBlood = 10;
+        }
     }
 
 

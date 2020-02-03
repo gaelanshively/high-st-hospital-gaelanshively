@@ -19,7 +19,7 @@ public class Main {
     }
 
     private static void printMainMenu() {
-        hospital.showAllPatients();
+        System.out.println("What should your employees do now?");
         userTakesATurn();
     }
 
@@ -80,7 +80,7 @@ public class Main {
                 System.out.println(patient.getPatientName() + " has died.");
                 System.out.println("You took way too much blood from them!");
                 hospital.getMapOfPatients().remove(patient.getPatientName());
-            } else if (patient.getPatientHealth() >= 50) {
+            } else if (patient.getPatientHealth() >= 30) {
                 System.out.println(patient.getPatientName() + " is healthy!  They have been sent home.");
                 hospital.getMapOfPatients().remove(patient.getPatientName());
             }
